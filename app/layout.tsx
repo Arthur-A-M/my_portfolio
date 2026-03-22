@@ -43,9 +43,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
-      <body className="min-h-screen bg-background font-sans text-foreground">
+      <body className="bg-background text-foreground font-sans">
         {children}
       </body>
     </html>
