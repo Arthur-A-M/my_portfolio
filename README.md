@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+A one-page developer portfolio built with Next.js 16, React 19, and Tailwind CSS 4.
 
-First, run the development server:
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| UI | React 19 |
+| Styling | Tailwind CSS 4 + custom CSS class system |
+| Language | TypeScript 5 (strict) |
+| Fonts | Geist Sans + Geist Mono via `next/font/google` |
+
+## Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # start dev server at http://localhost:3000
+npm run build    # production build
+npm run start    # serve production build
+npm run lint     # run ESLint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  globals.css    # design tokens + shared utility classes
+  layout.tsx     # root shell, metadata, font loading
+  page.tsx       # one-page portfolio (hero, about, work, principles, contact)
+public/          # static assets (add images, favicon, og-image here)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
 
-## Learn More
+### Content — `app/page.tsx`
 
-To learn more about Next.js, take a look at the following resources:
+All copy lives in typed data arrays at the top of the file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `focusAreas` — short strings shown as pills in the hero
+- `featuredProjects` — `{ name, type, summary, impact }` objects for the work section
+- `workingPrinciples` — `{ title, description }` objects for the principles section
+- `nextSteps` — strings listed in the contact section
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Design tokens — `app/globals.css`
 
-## Deploy on Vercel
+Colors, spacing, and typography are defined as CSS custom properties on `:root`.
+Key tokens to change for a different palette:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```css
+--background: #f4ecdf;   /* page background */
+--foreground: #1d1711;   /* primary text */
+--accent:     #b55b39;   /* CTA / highlight color */
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dark mode overrides live in `@media (prefers-color-scheme: dark)`.
+
+### Metadata — `app/layout.tsx`
+
+Update the exported `metadata` object — title, description, keywords, and Open Graph fields.
