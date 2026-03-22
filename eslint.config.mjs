@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Model site is a separate Vite/React app — not part of this Next.js project
+    "Model site/**",
   ]),
 ]);
 
