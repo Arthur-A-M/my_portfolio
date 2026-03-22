@@ -54,18 +54,16 @@ const nextSteps = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-50 text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50">
-      <section className="border-b border-zinc-200/80 dark:border-zinc-800/80">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
+    <main className="page-shell">
+      <section className="section-divider">
+        <div className="section-shell flex flex-col gap-12 py-20 lg:py-28">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-4xl">
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-zinc-500 dark:text-zinc-400">
-                Portfolio base
-              </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-7xl">
+              <p className="eyebrow">Portfolio base</p>
+              <h1 className="headline mt-4 text-4xl font-semibold sm:text-5xl lg:text-7xl">
                 Building sharp digital work with structure, clarity, and room to grow.
               </h1>
-              <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-300 sm:text-lg">
+              <p className="body-copy mt-6 max-w-2xl text-base leading-7 sm:text-lg">
                 This homepage is now organized as a reusable portfolio foundation.
                 It gives you a clear hero, positioning, project area, working
                 principles, and contact section without locking you into generic
@@ -73,41 +71,30 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-3 rounded-[2rem] border border-zinc-200 bg-white p-6 shadow-[0_20px_80px_-40px_rgba(15,23,42,0.45)] dark:border-zinc-800 dark:bg-zinc-900 lg:max-w-sm">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
-                Current direction
-              </p>
-              <p className="text-2xl font-semibold tracking-tight">
+            <div className="panel panel-strong grid gap-3 rounded-[2rem] p-6 lg:max-w-sm">
+              <p className="eyebrow tracking-[0.2em]">Current direction</p>
+              <p className="headline text-2xl font-semibold">
                 One-page portfolio with strong editorial hierarchy.
               </p>
-              <p className="text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-                Stage 3 will handle the full visual system. For now, the focus is
-                on clean structure and content boundaries.
+              <p className="body-copy text-sm leading-6">
+                Stage 3 turns the structure into a real visual system with warm
+                contrast, stronger surfaces, and reusable styling primitives.
               </p>
             </div>
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#work"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-zinc-950 px-6 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-zinc-300"
-            >
+            <a href="#work" className="cta-primary">
               View selected work
             </a>
-            <a
-              href="#contact"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-300 px-6 text-sm font-medium text-zinc-900 transition-colors hover:border-zinc-900 hover:bg-white dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-zinc-300 dark:hover:bg-zinc-900"
-            >
+            <a href="#contact" className="cta-secondary">
               Jump to contact
             </a>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
             {focusAreas.map((area) => (
-              <div
-                key={area}
-                className="rounded-3xl border border-zinc-200 bg-white px-5 py-6 text-sm leading-6 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
-              >
+              <div key={area} className="pill-card rounded-3xl px-5 py-6 text-sm leading-6">
                 {area}
               </div>
             ))}
@@ -115,18 +102,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="border-b border-zinc-200/80 dark:border-zinc-800/80">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-12">
+      <section id="about" className="section-divider">
+        <div className="section-shell grid gap-10 py-20 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
-              About
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <p className="eyebrow">About</p>
+            <h2 className="headline mt-4 text-3xl font-semibold sm:text-4xl">
               A base for showing who you are, what you build, and how you think.
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-7 text-zinc-600 dark:text-zinc-300">
+          <div className="body-copy space-y-5 text-base leading-7">
             <p>
               The structure now supports an actual portfolio narrative instead of
               a framework demo. You can use this section for a concise bio,
@@ -142,18 +127,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="border-b border-zinc-200/80 dark:border-zinc-800/80">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-20 sm:px-10 lg:px-12">
+      <section id="work" className="section-divider">
+        <div className="section-shell flex flex-col gap-10 py-20">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-medium uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
-                Selected work
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+              <p className="eyebrow">Selected work</p>
+              <h2 className="headline mt-4 text-3xl font-semibold sm:text-4xl">
                 Featured projects are now first-class content blocks.
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+            <p className="body-copy max-w-xl text-sm leading-6">
               These entries are intentionally written as placeholders with real
               structure: project name, category, summary, and outcome.
             </p>
@@ -161,51 +144,31 @@ export default function Home() {
 
           <div className="grid gap-5 lg:grid-cols-3">
             {featuredProjects.map((project) => (
-              <article
-                key={project.name}
-                className="flex h-full flex-col rounded-[2rem] border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900"
-              >
-                <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-                  {project.type}
-                </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-                  {project.name}
-                </h3>
-                <p className="mt-4 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-                  {project.summary}
-                </p>
-                <p className="mt-auto pt-8 text-sm leading-6 text-zinc-900 dark:text-zinc-100">
-                  {project.impact}
-                </p>
+              <article key={project.name} className="panel panel-strong flex h-full flex-col rounded-[2rem] p-6">
+                <p className="eyebrow tracking-[0.18em]">{project.type}</p>
+                <h3 className="headline mt-4 text-2xl font-semibold">{project.name}</h3>
+                <p className="body-copy mt-4 text-sm leading-6">{project.summary}</p>
+                <p className="metric-copy mt-auto pt-8 text-sm leading-6">{project.impact}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-b border-zinc-200/80 dark:border-zinc-800/80">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:px-12">
+      <section className="section-divider">
+        <div className="section-shell grid gap-10 py-20 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
-              Principles
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <p className="eyebrow">Principles</p>
+            <h2 className="headline mt-4 text-3xl font-semibold sm:text-4xl">
               The working style can now be communicated explicitly.
             </h2>
           </div>
 
           <div className="grid gap-4">
             {workingPrinciples.map((principle) => (
-              <article
-                key={principle.title}
-                className="rounded-3xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900"
-              >
-                <h3 className="text-xl font-semibold tracking-tight">
-                  {principle.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-                  {principle.description}
-                </p>
+              <article key={principle.title} className="panel rounded-3xl p-6">
+                <h3 className="headline text-xl font-semibold">{principle.title}</h3>
+                <p className="body-copy mt-3 text-sm leading-6">{principle.description}</p>
               </article>
             ))}
           </div>
@@ -213,27 +176,23 @@ export default function Home() {
       </section>
 
       <section id="contact">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[1fr_0.9fr] lg:px-12 lg:py-24">
+        <div className="section-shell grid gap-10 py-20 lg:grid-cols-[1fr_0.9fr] lg:py-24">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.24em] text-zinc-500 dark:text-zinc-400">
-              Contact
-            </p>
-            <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            <p className="eyebrow">Contact</p>
+            <h2 className="headline mt-4 max-w-2xl text-3xl font-semibold sm:text-4xl">
               The closing section is ready for your real contact paths and next actions.
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-300">
+            <p className="body-copy mt-5 max-w-2xl text-base leading-7">
               In a later content pass, replace this generic copy with your actual
               email, social profiles, resume link, and availability details.
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
-              Suggested next edits
-            </p>
-            <ul className="mt-5 space-y-4 text-sm leading-6 text-zinc-700 dark:text-zinc-200">
+          <div className="panel panel-strong rounded-[2rem] p-6">
+            <p className="eyebrow tracking-[0.2em]">Suggested next edits</p>
+            <ul className="list-divider mt-5 space-y-4 text-sm leading-6 text-[color:var(--foreground)]">
               {nextSteps.map((step) => (
-                <li key={step} className="border-t border-zinc-200 pt-4 first:border-t-0 first:pt-0 dark:border-zinc-800">
+                <li key={step} className="pt-4 first:pt-0">
                   {step}
                 </li>
               ))}

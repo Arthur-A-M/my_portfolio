@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4ecdf;
+  --foreground: #1d1711;
+  --muted: #64584b;
+  --muted-soft: #8f806f;
+  --surface: rgba(255, 250, 241, 0.82);
+  --surface-strong: #fffaf1;
+  --border: rgba(113, 89, 66, 0.22);
+  --border-strong: rgba(113, 89, 66, 0.4);
+  --accent: #b55b39;
+  --accent-strong: #8f4022;
+  --accent-ink: #fff6ef;
+  --shadow: 0 24px 70px -42px rgba(44, 28, 16, 0.38);
 }
 
 @theme inline {
@@ -14,13 +24,174 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #120d0a;
+    --foreground: #f5ecdf;
+    --muted: #c5b5a3;
+    --muted-soft: #9b8977;
+    --surface: rgba(29, 22, 17, 0.82);
+    --surface-strong: #211912;
+    --border: rgba(210, 181, 148, 0.14);
+    --border-strong: rgba(210, 181, 148, 0.28);
+    --accent: #ee8d61;
+    --accent-strong: #f6a57f;
+    --accent-ink: #24150e;
+    --shadow: 0 28px 90px -48px rgba(0, 0, 0, 0.82);
   }
 }
 
-body {
+html {
   background: var(--background);
+}
+
+body {
+  min-height: 100vh;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(236, 160, 115, 0.2), transparent 26%),
+    radial-gradient(circle at 85% 10%, rgba(188, 117, 84, 0.14), transparent 22%),
+    linear-gradient(180deg, rgba(255, 250, 241, 0.72), transparent 34%),
+    var(--background);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    rgba(113, 89, 66, 0.045) 1px,
+    transparent 1px
+  );
+  background-size: 100% 42px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 82%);
+  opacity: 0.65;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  color: var(--foreground);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.section-divider {
+  border-bottom: 1px solid var(--border);
+}
+
+.section-shell {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+}
+
+.headline {
+  text-wrap: balance;
+  letter-spacing: -0.055em;
+}
+
+.body-copy {
+  color: var(--muted);
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 40%);
+}
+
+.panel-strong {
+  background: var(--surface-strong);
+}
+
+.pill-card {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-strong) 86%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.cta-primary,
+.cta-secondary {
+  display: inline-flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding-inline: 1.5rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.cta-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.cta-primary:hover {
+  transform: translateY(-1px);
+  background: var(--accent-strong);
+}
+
+.cta-secondary {
+  border: 1px solid var(--border-strong);
+  background: rgba(255, 255, 255, 0.24);
+  color: var(--foreground);
+}
+
+.cta-secondary:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.metric-copy {
+  color: var(--foreground);
+}
+
+.list-divider > * + * {
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-inline: 3rem;
+  }
 }
