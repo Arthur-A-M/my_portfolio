@@ -72,7 +72,7 @@ const skillGroups = [
 
 export function Skills() {
   return (
-    <section className="h-screen snap-start flex items-center justify-center bg-background overflow-y-auto">
+    <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-background">
       <div className="container mx-auto px-6 py-20">
         <motion.div
           className="text-center mb-16"

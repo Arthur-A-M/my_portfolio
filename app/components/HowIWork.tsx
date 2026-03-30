@@ -63,7 +63,7 @@ const values = [
 
 export function HowIWork() {
   return (
-    <section className="h-screen snap-start flex items-center justify-center bg-gradient-to-b from-background to-accent/5 overflow-y-auto">
+    <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto px-6 py-20">
         <motion.div
           className="text-center mb-16"

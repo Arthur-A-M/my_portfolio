@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="dark">
       <ScrollProgress />
-      <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+      <div className="h-[100dvh] snap-y snap-proximity overflow-y-auto scroll-smooth">
         <Hero />
         <Capabilities />
         <FeaturedWork />

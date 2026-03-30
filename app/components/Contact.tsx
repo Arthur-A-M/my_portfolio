@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="h-screen snap-start flex items-center justify-center bg-gradient-to-b from-accent/5 to-background relative overflow-hidden"
+      className="min-h-[100dvh] snap-start flex items-center justify-center bg-gradient-to-b from-accent/5 to-background relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">

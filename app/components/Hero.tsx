@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   return (
-    <section className="h-screen snap-start flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-accent/10">
+    <section className="min-h-[100dvh] snap-start flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-accent/10">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

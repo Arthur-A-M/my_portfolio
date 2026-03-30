@@ -67,7 +67,7 @@ export function Certifications() {
   const inProgress = certifications.filter((c) => c.status === "in-progress");
 
   return (
-    <section className="h-screen snap-start flex items-center justify-center bg-gradient-to-b from-accent/5 to-background overflow-y-auto">
+    <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-gradient-to-b from-accent/5 to-background">
       <div className="container mx-auto px-6 py-20">
         <motion.div
           className="text-center mb-16"
