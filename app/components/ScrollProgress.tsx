@@ -2,8 +2,10 @@
 
 import { motion, useScroll } from "motion/react";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function ScrollProgress() {
+  const t = useTranslations("scrollProgress");
   const { scrollYProgress } = useScroll();
   const [currentSection, setCurrentSection] = useState(0);
   const totalSections = 7;
@@ -30,15 +32,7 @@ export function ScrollProgress() {
     }
   }, []);
 
-  const sectionNames = [
-    "Hero",
-    "Capabilities",
-    "Work",
-    "Skills",
-    "Certifications",
-    "Process",
-    "Contact",
-  ];
+  const sectionNames = t.raw("sections") as string[];
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">

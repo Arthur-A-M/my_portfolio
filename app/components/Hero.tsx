@@ -2,8 +2,12 @@
 
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Hero() {
+  const t = useTranslations("hero");
+
   const scrollToNext = () => {
     const sections = document.querySelectorAll(".snap-start");
     if (sections[1]) {
@@ -41,6 +45,10 @@ export function Hero() {
         />
       </div>
 
+      <div className="absolute top-6 right-6 z-20">
+        <LanguageSwitcher />
+      </div>
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -49,7 +57,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="inline-block mb-4 px-4 py-2 rounded-full bg-chart-1/20 border border-chart-1/30">
-              <span className="text-sm text-chart-1">Available for new opportunities</span>
+              <span className="text-sm text-chart-1">{t("badge")}</span>
             </div>
           </motion.div>
 
@@ -59,7 +67,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Full Stack Developer
+            {t("title")}
           </motion.h1>
 
           <motion.p
@@ -68,7 +76,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Building scalable solutions that transform complex problems into elegant user experiences
+            {t("subtitle")}
           </motion.p>
 
           <motion.div
@@ -81,7 +89,7 @@ export function Hero() {
               onClick={scrollToNext}
               className="group px-8 py-4 bg-gradient-to-r from-chart-1 to-chart-2 text-white rounded-lg hover:shadow-lg hover:shadow-chart-1/50 transition-all duration-300 hover:scale-105"
             >
-              Explore My Work
+              {t("explore")}
             </button>
             <button
               onClick={() => {
@@ -90,7 +98,7 @@ export function Hero() {
               }}
               className="px-8 py-4 border border-border rounded-lg hover:bg-accent transition-all duration-300 hover:scale-105"
             >
-              Get In Touch
+              {t("contact")}
             </button>
           </motion.div>
         </div>

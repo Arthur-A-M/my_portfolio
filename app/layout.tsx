@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,29 +11,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Portfolio",
-    template: "%s | Portfolio",
-  },
-  description:
-    "A modern portfolio base built with Next.js 16, React 19, and Tailwind CSS 4.",
-  applicationName: "Portfolio",
-  keywords: [
-    "portfolio",
-    "next.js",
-    "react",
-    "typescript",
-    "tailwind css",
-  ],
-  openGraph: {
-    title: "Portfolio",
-    description:
-      "A modern portfolio base built with Next.js 16, React 19, and Tailwind CSS 4.",
-    type: "website",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,9 +21,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
-      <body className="bg-background text-foreground font-sans">
-        {children}
-      </body>
+      <body className="bg-background text-foreground font-sans">{children}</body>
     </html>
   );
 }

@@ -2,51 +2,21 @@
 
 import { motion } from "motion/react";
 import { Code2, Server, Layers, Lightbulb, Award } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const capabilities = [
-  {
-    icon: Code2,
-    title: "Frontend Development",
-    description: "Crafting responsive, accessible interfaces with modern frameworks and best practices",
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
-    certifications: [
-      { name: "React Developer", issuer: "Meta" },
-      { name: "Frontend Masters", issuer: "FEM" },
-    ],
-  },
-  {
-    icon: Server,
-    title: "Backend Development",
-    description: "Building robust APIs and services with scalable architecture and security in mind",
-    skills: ["Node.js", "PostgreSQL", "REST APIs", "GraphQL"],
-    certifications: [
-      { name: "Node.js Developer", issuer: "OpenJS" },
-      { name: "AWS Certified", issuer: "Amazon" },
-    ],
-  },
-  {
-    icon: Layers,
-    title: "Full Stack Systems",
-    description: "Integrating frontend and backend into cohesive, production-ready applications",
-    skills: ["System Design", "DevOps", "CI/CD", "Cloud Infrastructure"],
-    certifications: [
-      { name: "Solutions Architect", issuer: "AWS" },
-      { name: "Kubernetes Admin", issuer: "CNCF" },
-    ],
-  },
-  {
-    icon: Lightbulb,
-    title: "Problem Solving & Architecture",
-    description: "Analyzing requirements and designing efficient, maintainable solutions",
-    skills: ["System Design", "Code Review", "Performance Optimization", "Testing"],
-    certifications: [
-      { name: "System Design", issuer: "Educative" },
-      { name: "Clean Code", issuer: "Uncle Bob" },
-    ],
-  },
-];
+type Capability = {
+  title: string;
+  description: string;
+  skills: string[];
+  certifications: Array<{ name: string; issuer: string }>;
+};
+
+const icons = [Code2, Server, Layers, Lightbulb];
 
 export function Capabilities() {
+  const t = useTranslations("capabilities");
+  const capabilities = t.raw("items") as Capability[];
+
   return (
     <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-background">
       <div className="container mx-auto px-6 py-20">
@@ -58,19 +28,19 @@ export function Capabilities() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-chart-1 bg-clip-text text-transparent">
-            Core Capabilities
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Validated expertise across the full development stack
+            {t("subtitle")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {capabilities.map((capability, index) => {
-            const Icon = capability.icon;
+            const Icon = icons[index] ?? Code2;
             return (
               <motion.div
-                key={capability.title}
+                key={`${capability.title}-${index}`}
                 className="group relative p-8 rounded-2xl border border-border bg-card hover:bg-accent/50 transition-all duration-300 hover:shadow-xl hover:shadow-chart-1/10 hover:-translate-y-1"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +71,7 @@ export function Capabilities() {
                 <div className="pt-4 border-t border-border">
                   <div className="flex items-center gap-2 mb-2">
                     <Award className="w-4 h-4 text-chart-1" />
-                    <span className="text-sm text-muted-foreground">Certifications</span>
+                    <span className="text-sm text-muted-foreground">{t("certificationsLabel")}</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {capability.certifications.map((cert) => (

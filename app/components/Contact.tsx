@@ -2,8 +2,11 @@
 
 import { motion } from "motion/react";
 import { Mail, Linkedin, Github, Send, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function Contact() {
+  const t = useTranslations("contact");
+
   return (
     <section
       id="contact"
@@ -35,10 +38,10 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-5xl md:text-6xl mb-6 bg-gradient-to-r from-foreground via-chart-1 to-chart-2 bg-clip-text text-transparent">
-              Let&apos;s Build Something Great
+              {t("title")}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Available for full-time opportunities, consulting, or collaboration on innovative projects
+              {t("subtitle")}
             </p>
           </motion.div>
 
@@ -50,7 +53,7 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="p-8 rounded-2xl border border-border bg-card hover:bg-accent/30 transition-all duration-300 hover:shadow-xl hover:shadow-chart-1/10">
-              <h3 className="text-2xl mb-6">Get in Touch</h3>
+              <h3 className="text-2xl mb-6">{t("getInTouch")}</h3>
 
               <div className="space-y-4">
                 <a
@@ -61,7 +64,7 @@ export function Contact() {
                     <Mail className="w-5 h-5 text-chart-1" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Email</div>
+                    <div className="text-sm text-muted-foreground">{t("email")}</div>
                     <div className="group-hover:text-chart-1 transition-colors">
                       hello@example.com
                     </div>
@@ -76,9 +79,9 @@ export function Contact() {
                     <MapPin className="w-5 h-5 text-chart-2" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">Location</div>
+                    <div className="text-sm text-muted-foreground">{t("location")}</div>
                     <div className="group-hover:text-chart-2 transition-colors">
-                      Available Remotely
+                      {t("locationValue")}
                     </div>
                   </div>
                 </a>
@@ -86,7 +89,7 @@ export function Contact() {
             </div>
 
             <div className="p-8 rounded-2xl border border-border bg-card hover:bg-accent/30 transition-all duration-300 hover:shadow-xl hover:shadow-chart-2/10">
-              <h3 className="text-2xl mb-6">Connect Online</h3>
+              <h3 className="text-2xl mb-6">{t("connectOnline")}</h3>
 
               <div className="space-y-4">
                 <a
@@ -99,9 +102,9 @@ export function Contact() {
                     <Linkedin className="w-5 h-5 text-chart-1" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">LinkedIn</div>
+                    <div className="text-sm text-muted-foreground">{t("linkedin")}</div>
                     <div className="group-hover:text-chart-1 transition-colors">
-                      Connect professionally
+                      {t("linkedinDescription")}
                     </div>
                   </div>
                 </a>
@@ -116,9 +119,9 @@ export function Contact() {
                     <Github className="w-5 h-5 text-chart-2" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">GitHub</div>
+                    <div className="text-sm text-muted-foreground">{t("github")}</div>
                     <div className="group-hover:text-chart-2 transition-colors">
-                      View my repositories
+                      {t("githubDescription")}
                     </div>
                   </div>
                 </a>
@@ -138,7 +141,7 @@ export function Contact() {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-chart-1 to-chart-2 text-white rounded-lg hover:shadow-lg hover:shadow-chart-1/50 transition-all duration-300 hover:scale-105 group"
             >
               <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              Send a Message
+              {t("sendMessage")}
             </a>
           </motion.div>
 
@@ -149,7 +152,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <p>© 2026 Full Stack Developer Portfolio. Built with Next.js, TypeScript, and Tailwind CSS.</p>
+            <p>{t("footer")}</p>
           </motion.div>
         </div>
       </div>

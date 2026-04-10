@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "title": {
+      "default": "Portfolio",
+      "template": "%s | Portfolio"
+    },
+    "description": "A modern portfolio base built with Next.js 16, React 19, and Tailwind CSS 4.",
+    "applicationName": "Portfolio",
+    "keywords": ["portfolio", "next.js", "react", "typescript", "tailwind css"],
+    "openGraph": {
+      "title": "Portfolio",
+      "description": "A modern portfolio base built with Next.js 16, React 19, and Tailwind CSS 4."
+    }
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "en-US": "English (US)",
+    "pt-BR": "Portuguese (Brazil)"
+  },
+  "hero": {
+    "badge": "Available for new opportunities",
+    "title": "Full Stack Developer",
+    "subtitle": "Building scalable solutions that transform complex problems into elegant user experiences",
+    "explore": "Explore My Work",
+    "contact": "Get In Touch"
+  },
+  "scrollProgress": {
+    "sections": ["Hero", "Capabilities", "Work", "Skills", "Certifications", "Process", "Contact"]
+  },
+  "capabilities": {
+    "title": "Core Capabilities",
+    "subtitle": "Validated expertise across the full development stack",
+    "certificationsLabel": "Certifications",
+    "items": [
+      {
+        "title": "Frontend Development",
+        "description": "Crafting responsive, accessible interfaces with modern frameworks and best practices",
+        "skills": ["React", "TypeScript", "Tailwind CSS", "Next.js"],
+        "certifications": [
+          { "name": "React Developer", "issuer": "Meta" },
+          { "name": "Frontend Masters", "issuer": "FEM" }
+        ]
+      },
+      {
+        "title": "Backend Development",
+        "description": "Building robust APIs and services with scalable architecture and security in mind",
+        "skills": ["Node.js", "PostgreSQL", "REST APIs", "GraphQL"],
+        "certifications": [
+          { "name": "Node.js Developer", "issuer": "OpenJS" },
+          { "name": "AWS Certified", "issuer": "Amazon" }
+        ]
+      },
+      {
+        "title": "Full Stack Systems",
+        "description": "Integrating frontend and backend into cohesive, production-ready applications",
+        "skills": ["System Design", "DevOps", "CI/CD", "Cloud Infrastructure"],
+        "certifications": [
+          { "name": "Solutions Architect", "issuer": "AWS" },
+          { "name": "Kubernetes Admin", "issuer": "CNCF" }
+        ]
+      },
+      {
+        "title": "Problem Solving & Architecture",
+        "description": "Analyzing requirements and designing efficient, maintainable solutions",
+        "skills": ["System Design", "Code Review", "Performance Optimization", "Testing"],
+        "certifications": [
+          { "name": "System Design", "issuer": "Educative" },
+          { "name": "Clean Code", "issuer": "Uncle Bob" }
+        ]
+      }
+    ]
+  },
+  "featuredWork": {
+    "title": "Featured Work",
+    "subtitle": "Real problems solved with measurable results",
+    "labels": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "outcome": "Outcome",
+      "viewProject": "View Project",
+      "sourceCode": "Source Code",
+      "impactDelivered": "Impact Delivered"
+    },
+    "projects": [
+      {
+        "title": "E-Commerce Platform",
+        "problem": "Small businesses needed an affordable, scalable online store solution",
+        "solution": "Built a headless commerce platform with React and Node.js, integrating Stripe for payments",
+        "outcome": "Reduced operational costs by 40% and increased conversion rates by 25%",
+        "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+        "link": "#",
+        "github": "#"
+      },
+      {
+        "title": "Real-Time Analytics Dashboard",
+        "problem": "Marketing team required instant insights from multiple data sources",
+        "solution": "Developed a dashboard with live data visualization and automated reporting",
+        "outcome": "Decreased decision-making time from days to minutes, improved ROI tracking",
+        "tech": ["Next.js", "GraphQL", "Redis", "Chart.js", "Docker"],
+        "link": "#",
+        "github": "#"
+      },
+      {
+        "title": "API Gateway & Microservices",
+        "problem": "Legacy monolith created deployment bottlenecks and scaling issues",
+        "solution": "Architected microservices architecture with centralized API gateway",
+        "outcome": "99.9% uptime achieved, deployment frequency increased by 10x",
+        "tech": ["NestJS", "Kubernetes", "RabbitMQ", "MongoDB", "Terraform"],
+        "link": "#",
+        "github": "#"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Tools",
+    "subtitle": "Comprehensive technical expertise, validated by certifications",
+    "groups": [
+      {
+        "category": "Frontend",
+        "skills": [
+          { "name": "React / Next.js", "level": 95, "cert": "Meta Certified" },
+          { "name": "TypeScript", "level": 90, "cert": "Advanced" },
+          { "name": "Tailwind CSS", "level": 92, "cert": null },
+          { "name": "Vue.js", "level": 85, "cert": null },
+          { "name": "State Management", "level": 88, "cert": "Redux Certified" }
+        ]
+      },
+      {
+        "category": "Backend",
+        "skills": [
+          { "name": "Node.js / Express", "level": 93, "cert": "OpenJS Certified" },
+          { "name": "Python / Django", "level": 87, "cert": null },
+          { "name": "REST & GraphQL APIs", "level": 90, "cert": "API Design" },
+          { "name": "Authentication & Security", "level": 89, "cert": "OWASP" },
+          { "name": "Microservices", "level": 86, "cert": "AWS Certified" }
+        ]
+      },
+      {
+        "category": "Databases",
+        "skills": [
+          { "name": "PostgreSQL", "level": 91, "cert": "Advanced SQL" },
+          { "name": "MongoDB", "level": 88, "cert": "MongoDB University" },
+          { "name": "Redis", "level": 85, "cert": null },
+          { "name": "Database Design", "level": 90, "cert": "Schema Design" },
+          { "name": "ORMs (Prisma, TypeORM)", "level": 87, "cert": null }
+        ]
+      },
+      {
+        "category": "DevOps & Tools",
+        "skills": [
+          { "name": "Docker / Kubernetes", "level": 88, "cert": "K8s Admin" },
+          { "name": "AWS / Cloud Services", "level": 90, "cert": "Solutions Architect" },
+          { "name": "CI/CD Pipelines", "level": 89, "cert": "GitHub Actions" },
+          { "name": "Git / Version Control", "level": 95, "cert": null },
+          { "name": "Testing (Jest, Cypress)", "level": 87, "cert": "Test Automation" }
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications & Credentials",
+    "subtitle": "Validated expertise through continuous learning and professional development",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "currentlyPursuing": "Currently Pursuing",
+    "entries": [
+      {
+        "name": "AWS Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "date": "2024",
+        "status": "completed",
+        "category": "Cloud & Infrastructure"
+      },
+      {
+        "name": "Meta Front-End Developer Professional Certificate",
+        "issuer": "Meta",
+        "date": "2023",
+        "status": "completed",
+        "category": "Frontend Development"
+      },
+      {
+        "name": "Node.js Application Developer",
+        "issuer": "OpenJS Foundation",
+        "date": "2024",
+        "status": "completed",
+        "category": "Backend Development"
+      },
+      {
+        "name": "Kubernetes Administrator (CKA)",
+        "issuer": "Cloud Native Computing Foundation",
+        "date": "2024",
+        "status": "completed",
+        "category": "DevOps"
+      },
+      {
+        "name": "MongoDB Developer Certification",
+        "issuer": "MongoDB University",
+        "date": "2023",
+        "status": "completed",
+        "category": "Databases"
+      },
+      {
+        "name": "System Design & Architecture",
+        "issuer": "Educative.io",
+        "date": "2024",
+        "status": "completed",
+        "category": "Architecture"
+      },
+      {
+        "name": "AWS Certified Developer - Associate",
+        "issuer": "Amazon Web Services",
+        "date": "Expected Q2 2026",
+        "status": "in-progress",
+        "category": "Cloud & Infrastructure"
+      },
+      {
+        "name": "GraphQL Developer Certification",
+        "issuer": "The Guild",
+        "date": "Expected Q2 2026",
+        "status": "in-progress",
+        "category": "Backend Development"
+      }
+    ]
+  },
+  "howIWork": {
+    "title": "How I Work",
+    "subtitle": "A systematic approach to solving complex problems and delivering results",
+    "coreValues": "Core Values",
+    "workflow": [
+      {
+        "title": "Understand",
+        "description": "Deep dive into requirements, constraints, and user needs to identify the real problem"
+      },
+      {
+        "title": "Design",
+        "description": "Architect scalable solutions with clear trade-offs, choosing the right tools for the job"
+      },
+      {
+        "title": "Build",
+        "description": "Write clean, tested code following best practices and established patterns"
+      },
+      {
+        "title": "Deploy",
+        "description": "Ship with confidence using CI/CD pipelines, monitoring, and rollback strategies"
+      },
+      {
+        "title": "Iterate",
+        "description": "Measure outcomes, gather feedback, and continuously improve based on real data"
+      }
+    ],
+    "values": [
+      {
+        "title": "Collaboration First",
+        "description": "Great software is built by great teams. Clear communication and shared ownership drive success."
+      },
+      {
+        "title": "Impact Over Activity",
+        "description": "Focus on solving real problems and delivering measurable value, not just writing code."
+      },
+      {
+        "title": "Pragmatic Innovation",
+        "description": "Balance proven solutions with new technologies, always choosing what is best for the project."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Build Something Great",
+    "subtitle": "Available for full-time opportunities, consulting, or collaboration on innovative projects",
+    "getInTouch": "Get in Touch",
+    "connectOnline": "Connect Online",
+    "email": "Email",
+    "location": "Location",
+    "locationValue": "Available Remotely",
+    "linkedin": "LinkedIn",
+    "linkedinDescription": "Connect professionally",
+    "github": "GitHub",
+    "githubDescription": "View my repositories",
+    "sendMessage": "Send a Message",
+    "footer": "© 2026 Full Stack Developer Portfolio. Built with Next.js, TypeScript, and Tailwind CSS."
+  }
+}

@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Award, CheckCircle2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const skillGroups = [
   {
@@ -70,7 +71,25 @@ const skillGroups = [
   },
 ];
 
+type TranslatedSkill = {
+  name: string;
+  level: number;
+  cert: string | null;
+};
+
+type TranslatedGroup = {
+  category: string;
+  skills: TranslatedSkill[];
+};
+
 export function Skills() {
+  const t = useTranslations("skills");
+  const translatedGroups = t.raw("groups") as TranslatedGroup[];
+  const groups = skillGroups.map((group, index) => ({
+    ...group,
+    ...translatedGroups[index],
+  }));
+
   return (
     <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-background">
       <div className="container mx-auto px-6 py-20">
@@ -82,15 +101,15 @@ export function Skills() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-chart-3 bg-clip-text text-transparent">
-            Skills & Tools
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive technical expertise, validated by certifications
+            {t("subtitle")}
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {skillGroups.map((group, groupIndex) => (
+          {groups.map((group, groupIndex) => (
             <motion.div
               key={group.category}
               className="p-8 rounded-2xl border border-border bg-card"

@@ -2,38 +2,22 @@
 
 import { motion } from "motion/react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const projects = [
-  {
-    title: "E-Commerce Platform",
-    problem: "Small businesses needed an affordable, scalable online store solution",
-    solution: "Built a headless commerce platform with React and Node.js, integrating Stripe for payments",
-    outcome: "Reduced operational costs by 40% and increased conversion rates by 25%",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Real-Time Analytics Dashboard",
-    problem: "Marketing team required instant insights from multiple data sources",
-    solution: "Developed a dashboard with live data visualization and automated reporting",
-    outcome: "Decreased decision-making time from days to minutes, improved ROI tracking",
-    tech: ["Next.js", "GraphQL", "Redis", "Chart.js", "Docker"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "API Gateway & Microservices",
-    problem: "Legacy monolith created deployment bottlenecks and scaling issues",
-    solution: "Architected microservices architecture with centralized API gateway",
-    outcome: "99.9% uptime achieved, deployment frequency increased by 10x",
-    tech: ["NestJS", "Kubernetes", "RabbitMQ", "MongoDB", "Terraform"],
-    link: "#",
-    github: "#",
-  },
-];
+type Project = {
+  title: string;
+  problem: string;
+  solution: string;
+  outcome: string;
+  tech: string[];
+  link: string;
+  github: string;
+};
 
 export function FeaturedWork() {
+  const t = useTranslations("featuredWork");
+  const projects = t.raw("projects") as Project[];
+
   return (
     <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto px-6 py-20">
@@ -45,10 +29,10 @@ export function FeaturedWork() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-chart-2 bg-clip-text text-transparent">
-            Featured Work
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real problems solved with measurable results
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -70,15 +54,15 @@ export function FeaturedWork() {
 
                   <div className="space-y-4 mb-6">
                     <div>
-                      <div className="text-sm text-chart-2 mb-1">Problem</div>
+                      <div className="text-sm text-chart-2 mb-1">{t("labels.problem")}</div>
                       <p className="text-muted-foreground">{project.problem}</p>
                     </div>
                     <div>
-                      <div className="text-sm text-chart-1 mb-1">Solution</div>
+                      <div className="text-sm text-chart-1 mb-1">{t("labels.solution")}</div>
                       <p className="text-muted-foreground">{project.solution}</p>
                     </div>
                     <div>
-                      <div className="text-sm text-chart-3 mb-1">Outcome</div>
+                      <div className="text-sm text-chart-3 mb-1">{t("labels.outcome")}</div>
                       <p className="text-foreground">{project.outcome}</p>
                     </div>
                   </div>
@@ -99,13 +83,13 @@ export function FeaturedWork() {
                       href={project.link}
                       className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-chart-2 transition-colors"
                     >
-                      View Project <ExternalLink className="w-4 h-4" />
+                      {t("labels.viewProject")} <ExternalLink className="w-4 h-4" />
                     </a>
                     <a
                       href={project.github}
                       className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-chart-2 transition-colors"
                     >
-                      Source Code <Github className="w-4 h-4" />
+                      {t("labels.sourceCode")} <Github className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
@@ -114,7 +98,7 @@ export function FeaturedWork() {
                   <div className="w-full p-6 rounded-xl bg-gradient-to-br from-chart-2/20 to-chart-1/20 border border-chart-2/30 group-hover:scale-105 transition-transform duration-300">
                     <div className="text-center">
                       <ArrowRight className="w-12 h-12 text-chart-2 mx-auto mb-2" />
-                      <div className="text-sm text-muted-foreground">Impact Delivered</div>
+                      <div className="text-sm text-muted-foreground">{t("labels.impactDelivered")}</div>
                     </div>
                   </div>
                 </div>

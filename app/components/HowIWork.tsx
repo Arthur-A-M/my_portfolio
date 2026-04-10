@@ -2,66 +2,40 @@
 
 import { motion } from "motion/react";
 import { Search, Lightbulb, Code, Rocket, Target, Users } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const workflow = [
-  {
-    icon: Search,
-    title: "Understand",
-    description:
-      "Deep dive into requirements, constraints, and user needs to identify the real problem",
-    classes: "bg-chart-1/20 border-chart-1/30 text-chart-1",
-  },
-  {
-    icon: Lightbulb,
-    title: "Design",
-    description:
-      "Architect scalable solutions with clear trade-offs, choosing the right tools for the job",
-    classes: "bg-chart-2/20 border-chart-2/30 text-chart-2",
-  },
-  {
-    icon: Code,
-    title: "Build",
-    description: "Write clean, tested code following best practices and established patterns",
-    classes: "bg-chart-3/20 border-chart-3/30 text-chart-3",
-  },
-  {
-    icon: Rocket,
-    title: "Deploy",
-    description:
-      "Ship with confidence using CI/CD pipelines, monitoring, and rollback strategies",
-    classes: "bg-chart-4/20 border-chart-4/30 text-chart-4",
-  },
-  {
-    icon: Target,
-    title: "Iterate",
-    description:
-      "Measure outcomes, gather feedback, and continuously improve based on real data",
-    classes: "bg-chart-5/20 border-chart-5/30 text-chart-5",
-  },
+const workflowIcons = [Search, Lightbulb, Code, Rocket, Target];
+const workflowClasses = [
+  "bg-chart-1/20 border-chart-1/30 text-chart-1",
+  "bg-chart-2/20 border-chart-2/30 text-chart-2",
+  "bg-chart-3/20 border-chart-3/30 text-chart-3",
+  "bg-chart-4/20 border-chart-4/30 text-chart-4",
+  "bg-chart-5/20 border-chart-5/30 text-chart-5",
 ];
+const valueIcons = [Users, Target, Lightbulb];
 
-const values = [
-  {
-    icon: Users,
-    title: "Collaboration First",
-    description:
-      "Great software is built by great teams. Clear communication and shared ownership drive success.",
-  },
-  {
-    icon: Target,
-    title: "Impact Over Activity",
-    description:
-      "Focus on solving real problems and delivering measurable value, not just writing code.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Pragmatic Innovation",
-    description:
-      "Balance proven solutions with new technologies, always choosing what's best for the project.",
-  },
-];
+type WorkStep = {
+  title: string;
+  description: string;
+};
+
+type CoreValue = {
+  title: string;
+  description: string;
+};
 
 export function HowIWork() {
+  const t = useTranslations("howIWork");
+  const workflow = (t.raw("workflow") as WorkStep[]).map((step, index) => ({
+    ...step,
+    icon: workflowIcons[index] ?? Search,
+    classes: workflowClasses[index] ?? workflowClasses[0],
+  }));
+  const values = (t.raw("values") as CoreValue[]).map((value, index) => ({
+    ...value,
+    icon: valueIcons[index] ?? Users,
+  }));
+
   return (
     <section className="min-h-[100dvh] snap-start flex items-center justify-center bg-gradient-to-b from-background to-accent/5">
       <div className="container mx-auto px-6 py-20">
@@ -73,10 +47,10 @@ export function HowIWork() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-5xl md:text-6xl mb-4 bg-gradient-to-r from-foreground to-chart-5 bg-clip-text text-transparent">
-            How I Work
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A systematic approach to solving complex problems and delivering results
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -125,7 +99,7 @@ export function HowIWork() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-3xl mb-8 text-center">Core Values</h3>
+          <h3 className="text-3xl mb-8 text-center">{t("coreValues")}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;

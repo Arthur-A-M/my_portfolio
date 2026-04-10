@@ -2,67 +2,19 @@
 
 import { motion } from "motion/react";
 import { Award, Calendar, CheckCircle, Clock } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const certifications = [
-  {
-    name: "AWS Solutions Architect - Associate",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    status: "completed",
-    category: "Cloud & Infrastructure",
-  },
-  {
-    name: "Meta Front-End Developer Professional Certificate",
-    issuer: "Meta",
-    date: "2023",
-    status: "completed",
-    category: "Frontend Development",
-  },
-  {
-    name: "Node.js Application Developer",
-    issuer: "OpenJS Foundation",
-    date: "2024",
-    status: "completed",
-    category: "Backend Development",
-  },
-  {
-    name: "Kubernetes Administrator (CKA)",
-    issuer: "Cloud Native Computing Foundation",
-    date: "2024",
-    status: "completed",
-    category: "DevOps",
-  },
-  {
-    name: "MongoDB Developer Certification",
-    issuer: "MongoDB University",
-    date: "2023",
-    status: "completed",
-    category: "Databases",
-  },
-  {
-    name: "System Design & Architecture",
-    issuer: "Educative.io",
-    date: "2024",
-    status: "completed",
-    category: "Architecture",
-  },
-  {
-    name: "AWS Certified Developer - Associate",
-    issuer: "Amazon Web Services",
-    date: "Expected Q2 2026",
-    status: "in-progress",
-    category: "Cloud & Infrastructure",
-  },
-  {
-    name: "GraphQL Developer Certification",
-    issuer: "The Guild",
-    date: "Expected Q2 2026",
-    status: "in-progress",
-    category: "Backend Development",
-  },
-];
+type Certification = {
+  name: string;
+  issuer: string;
+  date: string;
+  status: "completed" | "in-progress";
+  category: string;
+};
 
 export function Certifications() {
+  const t = useTranslations("certifications");
+  const certifications = t.raw("entries") as Certification[];
   const completed = certifications.filter((c) => c.status === "completed");
   const inProgress = certifications.filter((c) => c.status === "in-progress");
 
@@ -80,20 +32,20 @@ export function Certifications() {
             <Award className="w-12 h-12 text-chart-1" />
           </div>
           <h2 className="text-5xl md:text-6xl mb-4 bg-gradient-to-r from-foreground via-chart-1 to-chart-4 bg-clip-text text-transparent">
-            Certifications & Credentials
+            {t("title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Validated expertise through continuous learning and professional development
+            {t("subtitle")}
           </p>
           <div className="flex gap-8 justify-center mt-8">
             <div className="text-center">
               <div className="text-4xl mb-2">{completed.length}</div>
-              <div className="text-sm text-muted-foreground">Completed</div>
+              <div className="text-sm text-muted-foreground">{t("completed")}</div>
             </div>
             <div className="w-px bg-border" />
             <div className="text-center">
               <div className="text-4xl mb-2">{inProgress.length}</div>
-              <div className="text-sm text-muted-foreground">In Progress</div>
+              <div className="text-sm text-muted-foreground">{t("inProgress")}</div>
             </div>
           </div>
         </motion.div>
@@ -138,7 +90,7 @@ export function Certifications() {
                 viewport={{ once: true }}
               >
                 <Clock className="w-6 h-6 text-chart-4" />
-                Currently Pursuing
+                {t("currentlyPursuing")}
               </motion.h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
