@@ -35,10 +35,10 @@ export function ScrollProgress() {
   const sectionNames = t.raw("sections") as string[];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+    <div className="fixed inset-0 z-50 pointer-events-none">
       {/* Progress bar */}
       <motion.div
-        className="h-1 bg-gradient-to-r from-chart-1 via-chart-2 to-chart-3 origin-left"
+        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-chart-1 via-chart-2 to-chart-3 origin-left"
         style={{ scaleX: scrollYProgress }}
       />
 
