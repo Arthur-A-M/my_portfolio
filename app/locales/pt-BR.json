@@ -1,15 +1,15 @@
 {
   "metadata": {
     "title": {
-      "default": "Portfólio",
-      "template": "%s | Portfólio"
+      "default": "Arthur | Desenvolvedor Full Stack",
+      "template": "%s | Arthur"
     },
-    "description": "Uma base moderna de portfólio construída com Next.js 16, React 19 e Tailwind CSS 4.",
-    "applicationName": "Portfólio",
-    "keywords": ["portfólio", "next.js", "react", "typescript", "tailwind css"],
+    "description": "Portfólio pessoal de Arthur — Desenvolvedor Full Stack criando aplicações web escaláveis e focadas no usuário com tecnologias modernas.",
+    "applicationName": "Portfólio de Arthur",
+    "keywords": ["Arthur", "desenvolvedor full stack", "portfólio", "react", "next.js", "typescript", "node.js"],
     "openGraph": {
-      "title": "Portfólio",
-      "description": "Uma base moderna de portfólio construída com Next.js 16, React 19 e Tailwind CSS 4."
+      "title": "Arthur | Desenvolvedor Full Stack",
+      "description": "Portfólio pessoal de Arthur — Desenvolvedor Full Stack criando aplicações web escaláveis e focadas no usuário com tecnologias modernas."
     }
   },
   "languageSwitcher": {
