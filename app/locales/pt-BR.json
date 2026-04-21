@@ -1,15 +1,15 @@
 {
   "metadata": {
     "title": {
-      "default": "Arthur | Desenvolvedor Full Stack",
+      "default": "Arthur | Desenvolvedor Fullstack",
       "template": "%s | Arthur"
     },
-    "description": "Portfólio pessoal de Arthur — Desenvolvedor Full Stack criando aplicações web escaláveis e focadas no usuário com tecnologias modernas.",
+    "description": "Portfólio pessoal de Arthur — Desenvolvedor Fullstack especializado em aplicativos mobile (React Native), desenvolvimento web (Next.js), integrações em nuvem (AWS) e sistemas IoT/IIoT.",
     "applicationName": "Portfólio de Arthur",
-    "keywords": ["Arthur", "desenvolvedor full stack", "portfólio", "react", "next.js", "typescript", "node.js"],
+    "keywords": ["Arthur", "desenvolvedor fullstack", "portfólio", "react native", "next.js", "typescript", "node.js", "aws", "iot"],
     "openGraph": {
-      "title": "Arthur | Desenvolvedor Full Stack",
-      "description": "Portfólio pessoal de Arthur — Desenvolvedor Full Stack criando aplicações web escaláveis e focadas no usuário com tecnologias modernas."
+      "title": "Arthur | Desenvolvedor Fullstack",
+      "description": "Portfólio pessoal de Arthur — Desenvolvedor Fullstack especializado em aplicativos mobile (React Native), desenvolvimento web (Next.js), integrações em nuvem (AWS) e sistemas IoT/IIoT."
     }
   },
   "languageSwitcher": {
@@ -19,8 +19,8 @@
   },
   "hero": {
     "badge": "Disponível para novas oportunidades",
-    "title": "Desenvolvedor Full Stack",
-    "subtitle": "Construindo soluções escaláveis que transformam problemas complexos em experiências elegantes para o usuário",
+    "title": "Desenvolvedor Fullstack",
+    "subtitle": "Desenvolvendo aplicações mobile e web, sistemas IoT conectados à nuvem e integrações que transformam problemas complexos em experiências fluidas",
     "explore": "Explorar meu trabalho",
     "contact": "Entrar em contato"
   },
@@ -33,39 +33,39 @@
     "certificationsLabel": "Certificações",
     "items": [
       {
-        "title": "Desenvolvimento Frontend",
-        "description": "Criação de interfaces responsivas e acessíveis com frameworks modernos e boas práticas",
-        "skills": ["React", "TypeScript", "Tailwind CSS", "Next.js"],
+        "title": "Desenvolvimento Mobile",
+        "description": "Criação de apps multiplataforma com React Native, integração de APIs e deploy em ambientes cloud",
+        "skills": ["React Native", "TypeScript", "JavaScript", "Expo"],
         "certifications": [
-          { "name": "Desenvolvedor React", "issuer": "Meta" },
-          { "name": "Frontend Masters", "issuer": "FEM" }
+          { "name": "React Native", "issuer": "Avançado" },
+          { "name": "TypeScript", "issuer": "Avançado" }
         ]
       },
       {
-        "title": "Desenvolvimento Backend",
-        "description": "Construção de APIs e serviços robustos com arquitetura escalável e segurança em primeiro plano",
-        "skills": ["Node.js", "PostgreSQL", "APIs REST", "GraphQL"],
+        "title": "Desenvolvimento Web",
+        "description": "Criação de interfaces web modernas e responsivas com Next.js, entregando experiências de usuário refinadas",
+        "skills": ["Next.js", "React.js", "HTML5", "CSS3"],
         "certifications": [
-          { "name": "Desenvolvedor Node.js", "issuer": "OpenJS" },
-          { "name": "Certificado AWS", "issuer": "Amazon" }
+          { "name": "Next.js", "issuer": "Intermediário" },
+          { "name": "HTML5 / CSS3", "issuer": "Avançado" }
         ]
       },
       {
-        "title": "Sistemas Full Stack",
-        "description": "Integração de frontend e backend em aplicações coesas e prontas para produção",
-        "skills": ["System Design", "DevOps", "CI/CD", "Infraestrutura em nuvem"],
+        "title": "Backend e Nuvem",
+        "description": "Desenvolvimento de APIs REST, gerenciamento de bancos de dados e infraestrutura escalável na AWS",
+        "skills": ["Node.js", "MySQL", "APIs REST", "AWS"],
         "certifications": [
-          { "name": "Arquiteto de Soluções", "issuer": "AWS" },
-          { "name": "Administrador Kubernetes", "issuer": "CNCF" }
+          { "name": "Node.js", "issuer": "Avançado" },
+          { "name": "AWS", "issuer": "Intermediário" }
         ]
       },
       {
-        "title": "Resolução de problemas e arquitetura",
-        "description": "Análise de requisitos e desenho de soluções eficientes e de fácil manutenção",
-        "skills": ["System Design", "Revisão de código", "Otimização de performance", "Testes"],
+        "title": "IoT e Sistemas Embarcados",
+        "description": "Criação e integração de dispositivos IoT/IIoT para Indústria 4.0 com protocolos de comunicação M2M",
+        "skills": ["C++", "MQTT", "Python", "Indústria 4.0"],
         "certifications": [
-          { "name": "System Design", "issuer": "Educative" },
-          { "name": "Código Limpo", "issuer": "Uncle Bob" }
+          { "name": "MQTT", "issuer": "Avançado" },
+          { "name": "IoT / IIoT", "issuer": "Avançado" }
         ]
       }
     ]
@@ -83,29 +83,29 @@
     },
     "projects": [
       {
-        "title": "Plataforma de E-commerce",
-        "problem": "Pequenos negócios precisavam de uma solução de loja virtual acessível e escalável",
-        "solution": "Construção de uma plataforma de comércio headless com React e Node.js, integrada ao Stripe para pagamentos",
-        "outcome": "Redução de 40% nos custos operacionais e aumento de 25% na taxa de conversão",
-        "tech": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+        "title": "App Mobile para Inovação Hospitalar",
+        "problem": "A equipe hospitalar precisava de uma solução digital para gerenciar e automatizar os fluxos de limpeza de equipamentos",
+        "solution": "Desenvolvimento de app multiplataforma com React Native e TypeScript, com API REST em Node.js e banco MySQL, com deploy na AWS",
+        "outcome": "Operações de limpeza de equipamentos digitalizadas, reduzindo o esforço de rastreamento manual e melhorando os fluxos de conformidade",
+        "tech": ["React Native", "TypeScript", "Node.js", "MySQL", "AWS"],
         "link": "#",
         "github": "#"
       },
       {
-        "title": "Dashboard de análises em tempo real",
-        "problem": "A equipe de marketing precisava de insights imediatos de múltiplas fontes de dados",
-        "solution": "Desenvolvimento de dashboard com visualização de dados em tempo real e relatórios automáticos",
-        "outcome": "Tempo de decisão reduzido de dias para minutos, com melhor acompanhamento de ROI",
-        "tech": ["Next.js", "GraphQL", "Redis", "Chart.js", "Docker"],
+        "title": "Sistema IoT de Monitoramento de Peso",
+        "problem": "Cliente industrial precisava de controle automático e em tempo real do estoque refrigerado por dados de sensores",
+        "solution": "Projeto e construção de dispositivos IoT (seleção de componentes, soldagem, firmware em C++) com comunicação M2M via MQTT/HTTP e automação em Python integrada a backend na AWS",
+        "outcome": "Contagem manual de estoque substituída por monitoramento contínuo em tempo real, habilitando automação logística Indústria 4.0",
+        "tech": ["C++", "MQTT", "Python", "AWS", "MySQL"],
         "link": "#",
         "github": "#"
       },
       {
-        "title": "Gateway de API e microserviços",
-        "problem": "Um monólito legado gerava gargalos de deploy e problemas de escalabilidade",
-        "solution": "Arquitetura de microserviços com gateway de API centralizado",
-        "outcome": "99,9% de uptime alcançado, com frequência de deploy 10x maior",
-        "tech": ["NestJS", "Kubernetes", "RabbitMQ", "MongoDB", "Terraform"],
+        "title": "Plataforma Web Fullstack",
+        "problem": "O cliente precisava de uma plataforma web pronta para produção com integrações de API seguras e deploy em nuvem",
+        "solution": "Desenvolvimento de aplicação fullstack com Next.js no frontend e APIs REST em Node.js conectadas ao MySQL, com HTTPS e deploy na AWS",
+        "outcome": "Plataforma em produção na nuvem com deploys versionados, comunicação confiável via API e código de fácil manutenção",
+        "tech": ["Next.js", "Node.js", "MySQL", "APIs REST", "AWS"],
         "link": "#",
         "github": "#"
       }
@@ -116,43 +116,43 @@
     "subtitle": "Especialidade técnica abrangente, validada por certificações",
     "groups": [
       {
-        "category": "Frontend",
+        "category": "Frontend e Mobile",
         "skills": [
-          { "name": "React / Next.js", "level": 95, "cert": "Certificação Meta" },
-          { "name": "TypeScript", "level": 90, "cert": "Avançado" },
-          { "name": "Tailwind CSS", "level": 92, "cert": null },
-          { "name": "Vue.js", "level": 85, "cert": null },
-          { "name": "Gerenciamento de estado", "level": 88, "cert": "Certificação Redux" }
+          { "name": "JavaScript", "level": 90, "cert": "Avançado" },
+          { "name": "TypeScript", "level": 88, "cert": "Avançado" },
+          { "name": "React Native", "level": 90, "cert": "Avançado" },
+          { "name": "React.js", "level": 72, "cert": "Intermediário" },
+          { "name": "Next.js", "level": 70, "cert": "Intermediário" }
         ]
       },
       {
-        "category": "Backend",
+        "category": "Web e Linguagens",
         "skills": [
-          { "name": "Node.js / Express", "level": 93, "cert": "OpenJS Certified" },
-          { "name": "Python / Django", "level": 87, "cert": null },
-          { "name": "APIs REST e GraphQL", "level": 90, "cert": "Design de APIs" },
-          { "name": "Autenticação e segurança", "level": 89, "cert": "OWASP" },
-          { "name": "Microserviços", "level": 86, "cert": "AWS Certified" }
+          { "name": "HTML5", "level": 90, "cert": "Avançado" },
+          { "name": "CSS3", "level": 88, "cert": "Avançado" },
+          { "name": "Python", "level": 68, "cert": "Intermediário" },
+          { "name": "Shell Script", "level": 65, "cert": "Intermediário" },
+          { "name": "MQTT", "level": 88, "cert": "Avançado" }
         ]
       },
       {
-        "category": "Bancos de dados",
+        "category": "Backend e Bancos de Dados",
         "skills": [
-          { "name": "PostgreSQL", "level": 91, "cert": "SQL avançado" },
-          { "name": "MongoDB", "level": 88, "cert": "MongoDB University" },
-          { "name": "Redis", "level": 85, "cert": null },
-          { "name": "Modelagem de banco", "level": 90, "cert": "Schema Design" },
-          { "name": "ORMs (Prisma, TypeORM)", "level": 87, "cert": null }
+          { "name": "Node.js", "level": 88, "cert": "Avançado" },
+          { "name": "APIs REST", "level": 80, "cert": "Avançado" },
+          { "name": "MySQL", "level": 70, "cert": "Intermediário" },
+          { "name": "PostgreSQL", "level": 70, "cert": "Intermediário" },
+          { "name": "SQL", "level": 70, "cert": "Intermediário" }
         ]
       },
       {
-        "category": "DevOps e ferramentas",
+        "category": "Ferramentas e Nuvem",
         "skills": [
-          { "name": "Docker / Kubernetes", "level": 88, "cert": "Administrador K8s" },
-          { "name": "AWS / Serviços em nuvem", "level": 90, "cert": "Arquiteto de Soluções" },
-          { "name": "Pipelines CI/CD", "level": 89, "cert": "GitHub Actions" },
-          { "name": "Git / Controle de versão", "level": 95, "cert": null },
-          { "name": "Testes (Jest, Cypress)", "level": 87, "cert": "Automação de testes" }
+          { "name": "Git", "level": 70, "cert": "Intermediário" },
+          { "name": "AWS (API Gateway, Lambda, S3)", "level": 68, "cert": "Intermediário" },
+          { "name": "Expo", "level": 70, "cert": "Intermediário" },
+          { "name": "Vercel", "level": 68, "cert": "Intermediário" },
+          { "name": "Postman", "level": 50, "cert": null }
         ]
       }
     ]
@@ -270,12 +270,12 @@
     "connectOnline": "Conecte-se online",
     "email": "E-mail",
     "location": "Localização",
-    "locationValue": "Disponível remotamente",
+    "locationValue": "Duque de Caxias, RJ",
     "linkedin": "LinkedIn",
     "linkedinDescription": "Conecte-se profissionalmente",
     "github": "GitHub",
     "githubDescription": "Veja meus repositórios",
     "sendMessage": "Enviar mensagem",
-    "footer": "© 2026 Portfólio de Desenvolvedor Full Stack. Construído com Next.js, TypeScript e Tailwind CSS."
+    "footer": "© 2026 Arthur de Andrade Mendes. Desenvolvido com Next.js, TypeScript e Tailwind CSS."
   }
 }

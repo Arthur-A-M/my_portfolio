@@ -57,7 +57,7 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:mendesarthur5656@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-accent transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-lg bg-chart-1/10 group-hover:bg-chart-1/20 transition-colors">
@@ -66,7 +66,7 @@ export function Contact() {
                   <div>
                     <div className="text-sm text-muted-foreground">{t("email")}</div>
                     <div className="group-hover:text-chart-1 transition-colors">
-                      hello@example.com
+                      mendesarthur5656@gmail.com
                     </div>
                   </div>
                 </a>
@@ -93,7 +93,7 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/arthur-mendes-2a0686229/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-accent transition-all duration-300 group"
@@ -110,7 +110,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Arthur-A-M"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl hover:bg-accent transition-all duration-300 group"
